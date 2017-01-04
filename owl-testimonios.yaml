@@ -15,7 +15,7 @@ form:
     _note:
       type: separator.note
       class: alert alert-info
-      content: 'Esta partícula necesita los siguientes átomos: <strong>"Owl Carousel"</strong> y <strong>"Animate.css"</strong>.'
+      content: 'Esta partícula necesita los siguientes átomos:  <br /> <a href="https://github.com/aulaideal/Atomo-Owlcarousel" target="_blank"><strong>Owl Carousel"</strong></a> y <a href="https://github.com/aulaideal/Atomo-Animate.css-Wow.js" target="_blank"><strong>Animate.css-Wow.js</strong></a>.'
 
     class:
       type: input.selectize
