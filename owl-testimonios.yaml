@@ -1,0 +1,309 @@
+name: Owl Testimonios
+description: Muestra un Slide de testimonios basado usando el Owl Carousel.
+type: particle
+icon: fa-sliders
+
+form:
+  overrideable: false
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Habilitar
+      description: Globally enable particle.
+      default: true
+
+    _note:
+      type: separator.note
+      class: alert alert-info
+      content: 'Esta partícula necesita los siguientes átomos: <strong>"Owl Carousel"</strong> y <strong>"Animate.css"</strong>.'
+
+    class:
+      type: input.selectize
+      label: Clase CSS
+      description: Clase CSS para la partícula.
+
+    displayitems:
+      type: input.number
+      label: Testimonios a mostrar
+      description: Número de testimonios a mostrar por vez.
+      min: 1
+      default: 1
+
+    title:
+      type: input.text
+      label: Título
+      description: Título de la partícula.
+      placeholder: Ingrese un título...
+
+    description:
+      type: textarea.textarea
+      label: Descripción
+      description: Descripción de la partícula.
+      placeholder: Ingrese una descripción para la partícula.
+
+    animateIn:
+      type: select.select
+      label: Animación de entrada
+      description: Define la animación de entrada para cada testimonio.
+      default: fadeIn
+      options:
+        default: default
+        bounce: bounce
+        flash: flash
+        pulse: pulse
+        rubberBand: rubberBand
+        shake: shake
+        swing: swing
+        tada: tada
+        wobble: wobble
+        jello: jello
+        bounceIn: bounceIn
+        bounceInDown: bounceInDown
+        bounceInLeft: bounceInLeft
+        bounceInRight: bounceInRight
+        bounceInUp: bounceInUp
+        bounceOut: bounceOut
+        bounceOutDown: bounceOutDown
+        bounceOutLeft: bounceOutLeft
+        bounceOutRight: bounceOutRight
+        bounceOutUp: bounceOutUp
+        fadeIn: fadeIn
+        fadeInDown: fadeInDown
+        fadeInDownBig: fadeInDownBig
+        fadeInLeft: fadeInLeft
+        fadeInLeftBig: fadeInLeftBig
+        fadeInRight: fadeInRight
+        fadeInRightBig: fadeInRightBig
+        fadeInUp: fadeInUp
+        fadeInUpBig: fadeInUpBig
+        fadeOut: fadeOut
+        fadeOutDown: fadeOutDown
+        fadeOutDownBig: fadeOutDownBig
+        fadeOutLeft: fadeOutLeft
+        fadeOutLeftBig: fadeOutLeftBig
+        fadeOutRight: fadeOutRight
+        fadeOutRightBig: fadeOutRightBig
+        fadeOutUp: fadeOutUp
+        fadeOutUpBig: fadeOutUpBig
+        flip: flip
+        flipInX: flipInX
+        flipInY: flipInY
+        flipOutX: flipOutX
+        flipOutY: flipOutY
+        lightSpeedIn: lightSpeedIn
+        lightSpeedOut: lightSpeedOut
+        rotateIn: rotateIn
+        rotateInDownLeft: rotateInDownLeft
+        rotateInDownRight: rotateInDownRight
+        rotateInUpLeft: rotateInUpLeft
+        rotateInUpRight: rotateInUpRight
+        rotateOut: rotateOut
+        rotateOutDownLeft: rotateOutDownLeft
+        rotateOutDownRight: rotateOutDownRight
+        rotateOutUpLeft: rotateOutUpLeft
+        rotateOutUpRight: rotateOutUpRight
+        slideInUp: slideInUp
+        slideInDown: slideInDown
+        slideInLeft: slideInLeft
+        slideInRight: slideInRight
+        slideOutUp: slideOutUp
+        slideOutDown: slideOutDown
+        slideOutLeft: slideOutLeft
+        slideOutRight: slideOutRight
+        zoomIn: zoomIn
+        zoomInDown: zoomInDown
+        zoomInLeft: zoomInLeft
+        zoomInRight: zoomInRight
+        zoomInUp: zoomInUp
+        zoomOut: zoomOut
+        zoomOutDown: zoomOutDown
+        zoomOutLeft: zoomOutLeft
+        zoomOutRight: zoomOutRight
+        zoomOutUp: zoomOutUp
+        hinge: hinge
+        rollIn: rollIn
+        rollOut: rollOut
+
+    animateOut:
+      type: select.select
+      label: Animación de Salida
+      description: Define la animación de salida para cada testimonio.
+      default: fadeOut
+      options:
+        default: default
+        bounce: bounce
+        flash: flash
+        pulse: pulse
+        rubberBand: rubberBand
+        shake: shake
+        swing: swing
+        tada: tada
+        wobble: wobble
+        jello: jello
+        bounceIn: bounceIn
+        bounceInDown: bounceInDown
+        bounceInLeft: bounceInLeft
+        bounceInRight: bounceInRight
+        bounceInUp: bounceInUp
+        bounceOut: bounceOut
+        bounceOutDown: bounceOutDown
+        bounceOutLeft: bounceOutLeft
+        bounceOutRight: bounceOutRight
+        bounceOutUp: bounceOutUp
+        fadeIn: fadeIn
+        fadeInDown: fadeInDown
+        fadeInDownBig: fadeInDownBig
+        fadeInLeft: fadeInLeft
+        fadeInLeftBig: fadeInLeftBig
+        fadeInRight: fadeInRight
+        fadeInRightBig: fadeInRightBig
+        fadeInUp: fadeInUp
+        fadeInUpBig: fadeInUpBig
+        fadeOut: fadeOut
+        fadeOutDown: fadeOutDown
+        fadeOutDownBig: fadeOutDownBig
+        fadeOutLeft: fadeOutLeft
+        fadeOutLeftBig: fadeOutLeftBig
+        fadeOutRight: fadeOutRight
+        fadeOutRightBig: fadeOutRightBig
+        fadeOutUp: fadeOutUp
+        fadeOutUpBig: fadeOutUpBig
+        flip: flip
+        flipInX: flipInX
+        flipInY: flipInY
+        flipOutX: flipOutX
+        flipOutY: flipOutY
+        lightSpeedIn: lightSpeedIn
+        lightSpeedOut: lightSpeedOut
+        rotateIn: rotateIn
+        rotateInDownLeft: rotateInDownLeft
+        rotateInDownRight: rotateInDownRight
+        rotateInUpLeft: rotateInUpLeft
+        rotateInUpRight: rotateInUpRight
+        rotateOut: rotateOut
+        rotateOutDownLeft: rotateOutDownLeft
+        rotateOutDownRight: rotateOutDownRight
+        rotateOutUpLeft: rotateOutUpLeft
+        rotateOutUpRight: rotateOutUpRight
+        slideInUp: slideInUp
+        slideInDown: slideInDown
+        slideInLeft: slideInLeft
+        slideInRight: slideInRight
+        slideOutUp: slideOutUp
+        slideOutDown: slideOutDown
+        slideOutLeft: slideOutLeft
+        slideOutRight: slideOutRight
+        zoomIn: zoomIn
+        zoomInDown: zoomInDown
+        zoomInLeft: zoomInLeft
+        zoomInRight: zoomInRight
+        zoomInUp: zoomInUp
+        zoomOut: zoomOut
+        zoomOutDown: zoomOutDown
+        zoomOutLeft: zoomOutLeft
+        zoomOutRight: zoomOutRight
+        zoomOutUp: zoomOutUp
+        hinge: hinge
+        rollIn: rollIn
+        rollOut: rollOut
+
+    nav:
+      type: select.select
+      label: Botones Ant/Sig
+      description: Habilitar o Deshabilitar los botones de Anterior / Siguiente.
+      default: enabled
+      options:
+        enabled: Enable
+        disabled: Disable
+
+    prevText:
+      type: input.text
+      label: Texto "Anterior"
+      description: Define el texto "Anterior". Funciona sólo si el campo "Ant/Sig" esta habilitado.
+      placeholder: &larr;
+
+    nextText:
+      type: input.text
+      label: Texto "Siguiente"
+      description: Define el texto "Anterior". Funciona sólo si el campo "Ant/Sig" esta habilitado.
+      placeholder: &rarr;
+
+    dots:
+      type: select.select
+      label: Botones de navegación
+      description: Habilitar o deshabilitar los Botones de navegación.
+      default: Habilitado
+      options:
+        enabled: Habilitado
+        disabled: Deshabilitado
+
+    loop:
+      type: select.select
+      label: Bucle infinito
+      description: Habilitar o deshabilitar  el bucle infinito.
+      default: Habilitado
+      options:
+        enabled: Habilitado
+        disabled: Deshabilitado
+ 
+
+    autoplay:
+      type: select.select
+      label: Autoplay
+      description: Habilitar o deshabilitar el Autoplay.
+      default: Habilitado
+      options:
+        enabled: Habilitado
+        disabled: Deshabilitado
+
+    autoplaySpeed:
+      type: input.text
+      label: Velocidad del Autoplay
+      description: Dedine la velocidad del Autoplay en milisegundos.
+      placeholder: 5000
+
+    pauseOnHover:
+      type: select.select
+      label: Pausar "On Hover"
+      description: Pausar la animación cuando el curso esta sobre un testimonio.
+      default: Habilitado
+      options:
+        enabled: Habilitado
+        disabled: Deshabilitado
+
+    items:
+      type: collection.list
+      array: true
+      label: Items de Testimonios
+      description: Crea cada testimonio que deseas mostrar.
+      value: name
+      ajax: true
+
+      fields:
+        .image:
+          type: input.imagepicker
+          label: Imagen
+          description: Selecciona una imagen.        
+        .icon:
+          type: input.icon
+          label: Ícono        
+
+        .author:
+          type: input.text
+          label: Autor
+          description: Ingrese el nombre del autor.
+
+        .puestotrabajo:
+          type: input.text
+          label: Cargo
+          description: Ingrese el cargo que ocupa el autor del testimonio.
+        .authorimage:
+          type: input.imagepicker
+          label: Imagen del autor
+          description: Selecciona la imagen del autor.
+        .desc:
+          type: textarea.textarea
+          label: Descripción
+          description: Define una descripción.
+          placeholder: Ingrese una corta descripción.
+      

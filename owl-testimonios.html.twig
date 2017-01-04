@@ -1,0 +1,120 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+  
+    {% block layout %}
+       
+
+<div class="{{ particle.class|e }} g-owlcarousel-layout-testimonial g-owlcarousel-{{ particle.displayitems }}-items {% if particle.nav == 'disabled' %}g-owlcarousel-nav-disabled{% endif %}">
+    {% if particle.title %}<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+    {% if particle.description %}<p class="g-owlcarousel-item-desc">{{ particle.description|raw }}</p>{% endif %}
+
+    <div id="g-owlcarousel-{{ id }}" class="g-owlcarousel owl-carousel">
+        {% for item in particle.items %}
+        <div class="item">
+            {% if item.desc %}
+            <div class="g-owlcarousel-item-desc">
+                {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
+                 {% if item.image %}<img src="{{ url(item.image)|e }}" alt="{{ item.image|e }}" />{% endif %}
+
+
+                {{ item.desc|raw }}
+                
+            </div>
+            {% endif %}
+
+            {% if item.authorimage or item.author %}
+            <div class="g-owlcarousel-author">
+                {% if item.authorimage %}
+                    <div class="g-owlcarousel-author-image">
+                        <span class="author-image">
+                            <img src="{{ url(item.authorimage)|e }}" alt="{{ item.author|e }}" />
+                        </span>
+                    </div>
+                {% endif %}
+
+                {% if item.author or item.puestotrabajo %}
+                <div class="g-owlcarousel-author-details">
+                    {% if item.author %}<span class="author-name">{{ item.author|raw }}</span>{% endif %}
+                    {% if item.puestotrabajo %}<span class="author-subtitle">{{ item.puestotrabajo|raw }}</span>{% endif %}
+                </div>
+                {% endif %}
+
+
+
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+    {% endblock %}
+{% endblock %}
+
+{% block javascript_footer %}
+    
+    <script type="text/javascript">
+    jQuery(window).load(function() {
+        var owl{{ id|replace({'-':'_'}) }} = jQuery('#g-owlcarousel-{{ id }}');
+        owl{{ id|replace({'-':'_'}) }}.owlCarousel({
+            items: {{ particle.displayitems }},
+            rtl: {% if gantry.page.direction == 'rtl' %}true{% else %}false{% endif %},
+            {% if particle.animateOut and particle.animateOut != 'default' %}
+            animateOut: '{{ particle.animateOut|default('fadeOut')|e }}',
+            {% endif %}
+            {% if particle.animateIn and particle.animateIn != 'default' %}
+            animateIn: '{{ particle.animateIn|default('fadeIn')|e }}',
+            {% endif %}
+            {% if particle.nav == 'enabled' %}
+            nav: true,
+            navText: ['{{ particle.prevText|default('<i class="fa fa-chevron-left" aria-hidden="true"></i>')|e('js') }}', '{{ particle.nextText|default('<i class="fa fa-chevron-right" aria-hidden="true"></i>')|e('js') }}'],
+            {% else %}
+            nav: false,
+            {% endif %} 
+            {% if particle.dots == 'enabled' %}
+            dots: true,
+            {% else %}
+            dots: false,
+            {% endif %}
+            {% if particle.loop == 'enabled' %}
+            loop: true,
+            {% else %}
+            loop: false,
+            {% endif %}
+            {% if particle.autoplay == 'enabled' %}
+            autoplay: true,
+            autoplayTimeout: {{ particle.autoplaySpeed|default('5000') }},
+            {% if particle.pauseOnHover == 'enabled' %}
+            autoplayHoverPause: true,
+            {% else %}
+            autoplayHoverPause: false,
+            {% endif %}
+            {% else %}
+            autoplay: false,
+            {% endif %}
+            {% if particle.displayitems > "1" %}
+            responsive:{
+                0:{
+                    items:1,
+                },
+                750:{
+                    items:{{ (particle.displayitems/2)|round(ceil) }},
+                },
+                1300:{
+                    items:{{ particle.displayitems }}
+                }
+            },
+            {% endif %}
+            
+            
+        })
+
+        
+    });
+    </script>  
+{% endblock %}
