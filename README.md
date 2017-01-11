@@ -17,6 +17,7 @@ El modo de instalación es muy sencillo:
 + Cargue el archivo "_owl-testimonios.scss" desde tu custom.scss colocando la siguiente linea al comienzo del archivo: 
 
 /* Estilos partícula Owl Testimonios */
+
  @import "owl-testimonios";
 
 
