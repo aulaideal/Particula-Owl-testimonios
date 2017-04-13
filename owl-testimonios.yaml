@@ -3,6 +3,10 @@ description: Muestra un Slide de testimonios basado usando el Owl Carousel.
 type: particle
 icon: fa-sliders
 
+configuration:
+  caching:
+    type: static
+
 form:
   overrideable: false
   fields:
