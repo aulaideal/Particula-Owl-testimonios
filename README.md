@@ -2,6 +2,8 @@
 Partícula para Gantry 5 que te permite incluir diferentes slides de testimonios con multiples opciones de configuración dentro de tu diseño. 
 Util para mostrar una seccion animada de testimonios.
 
+![particula-owl-testimonios](https://user-images.githubusercontent.com/9434043/26898346-20689ce2-4b91-11e7-8f93-d35834535654.png)
+
 Requisitos:
 Esta partícula necesita tener instalado y habilitado el Átomo "Owl Carousel" dentro de tu Diseño. Consíguelo de forma gratuita desde aquí:
 https://github.com/aulaideal/Atomo-Owlcarousel
