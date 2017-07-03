@@ -118,9 +118,9 @@ text-align: center;
         }
     }
     /*Arriba*/    
-    &.posicionbotonesnav_arriba{
-        margin-top: 2rem;
+    &.posicionbotonesnav_arriba{        
         .owl-theme {
+            margin-top: 3.3rem;
             .owl-nav{
             position: absolute;
             top: 0%;
@@ -129,8 +129,8 @@ text-align: center;
         }
     }
     &.posicionbotonesnav_arribaizquierda{
-        margin-top: 2rem;
         .owl-theme {
+            margin-top: 3.3rem;
             .owl-nav{
             position: absolute;
             top: 0%;
@@ -141,8 +141,8 @@ text-align: center;
         }
     }
     &.posicionbotonesnav_arribaderecha{
-    margin-top: 2rem;
         .owl-theme {
+            margin-top: 3.3rem;
             .owl-nav{
             @include display(inline-block);
             position: absolute;

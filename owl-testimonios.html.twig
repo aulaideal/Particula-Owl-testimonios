@@ -834,20 +834,10 @@
             {% if particle.animateIn and particle.animateIn != 'default' %}
             animateIn: '{{ particle.animateIn|default('fadeIn')|e }}',
             {% endif %}
-            {% if particle.nav %}
-            nav: true,
             {% if particle.prevText and particle.nextText %}
             navText: ['{{ particle.prevText }}', '{{ particle.nextText }}'],
             {% else %}
             navText: ['<i class="fa fa-chevron-left" style="color:{{ particle.colorbotonesnav }}"></i>','<i class="fa fa-chevron-right" style="color:{{ particle.colorbotonesnav }}"></i>'],
-            {% endif %} 
-            {% else %}
-            nav: false,
-            {% endif %} 
-            {% if particle.dots %}
-            dots: true,
-            {% else %}
-            dots: false,
             {% endif %}
             {% if particle.loop %}
             loop: true,
