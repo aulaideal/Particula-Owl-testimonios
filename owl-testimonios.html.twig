@@ -846,7 +846,7 @@
             {% endif %}
             {% if particle.autoplay %}
             autoplay: true,
-            autoplayTimeout: {{ particle.autoplaySpeed|default('5000') }},
+            autoplayTimeout:{{ particle.autoplaySpeed|default('5000')}},
             {% if particle.pauseOnHover %}
             autoplayHoverPause: true,
             {% else %}
